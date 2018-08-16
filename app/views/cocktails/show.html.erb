@@ -1,1 +1,20 @@
-<h1>My cocktail</h1>
+<div class="container">
+  <div "col-sm-6 col-sm-offset-4" >
+    <h1>My cocktail</h1>
+
+    <p><%= @cocktail.name%></p>
+
+      <%= simple_form_for @cocktail do |f| %>
+        <!-- <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %> -->
+      <div class="form-inputs">
+        <%= f.association :ingredients %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+      <% end %>
+  </div>
+
+</div>
