@@ -5,14 +5,9 @@ Rails.application.routes.draw do
   # A user can see the details of a given cocktail, with the dose needed for each ingredient
   # A user can create a new cocktail
   resources :cocktails, only: [:index, :new, :show, :create]
-  resources :doses, only: [:new, :create]
-
-
-
-
-
-
-  # get "cocktails/:id/doses/new", to: 'doses#new', as: :dose
-  # post "cocktails/:id/doses"
+  resources :cocktails do
+    resources :doses, only: [ :new, :create ]
+  end
+  resources :doses, only: [:destroy]
 
 end
