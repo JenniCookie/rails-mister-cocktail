@@ -1,6 +1,12 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1519214605650-76a613ee3245?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=48c9c4148ba1f29e4de8f31ba9e4b568&auto=format&fit=crop&w=1949&q=80');">
+  <div class="banner-content">
+    <h1>All the cocktails</h1>
+    <p>Make the best cocktails at home!</p>
+  </div>
+</div>
+
 <div class="container">
   <div "col-sm-6 col-sm-offset-4" >
-    <h1>All the cocktails</h1>
     <% @cocktails.each do |cocktail| %>
       <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
     <% end %>
